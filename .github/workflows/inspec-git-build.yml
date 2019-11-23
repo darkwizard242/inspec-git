@@ -13,20 +13,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-18.04
-    strategy:
-      max-parallel: 6
-      matrix:
-        TAG_NAME: [ubuntu-18.04, ubuntu-16.04]
 
     steps:
     - uses: actions/checkout@v1
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: 2.6.x
     - name: Install InSpec
       run: |
-        gem install inspec
+        wget https://packages.chef.io/files/stable/inspec/4.18.39/ubuntu/18.04/inspec_4.18.39-1_amd64.deb
+        dpkg -i inspec_4.18.39-1_amd64.deb
     - name: Running Git Inspec Profile
       run: |
         inspec exec .
