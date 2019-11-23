@@ -27,6 +27,6 @@ jobs:
     - name: Install InSpec
       run: |
         gem install inspec
-    - name: Running Inspec Profile: Git
+    - name: Running Git Inspec Profile
       run: |
         inspec exec .
