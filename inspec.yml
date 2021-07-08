@@ -1,8 +1,8 @@
 name: git
-title: Git Compliance 
+title: Git Compliance
 maintainer: Ali Muhammad
 copyright: Ali Muhammad
-copyright_email: am900820@gmail.com
+copyright_email: ali@alimuhammad.dev
 license: MIT
 summary: An Git Compliance Profile
 version: 0.1.0
